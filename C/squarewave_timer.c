@@ -1,6 +1,10 @@
 /*
- * 	startup.c
- *
+* Description:
+ *  Generates a continuous square wave signal on GPIOE pin 0 using
+ *  the SysTick timer in polling mode (no interrupts).
+ *  Demonstrates SysTick configuration, delay handling, and software-based
+ *  toggling of a GPIO output at a fixed period.
+ *  Hardware: MD407 (STM32F4-based board)
  */
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )

@@ -1,13 +1,11 @@
 /*
- * 	startup.c
- *
- *
  * Description:
- *  Controls an ASCII LCD display via GPIO registers.
- *  Demonstrates low-level data and control line handling, timing, and initialization
- *  of a standard HD44780-compatible LCD.
- *  Hardware: MD407 (STM32F4-based board)
+ *  Drives an HD44780-compatible ASCII LCD using direct GPIO register access.
+ *  Demonstrates low-level control/data line handling, proper LCD init sequence,
+ *  busy-flag polling, and simple text output with cursor positioning.
+ * Hardware: MD407 (STM32F4-based board, GPIOE wired to LCD)
  */
+ 
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )
 {

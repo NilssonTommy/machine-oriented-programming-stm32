@@ -1,6 +1,9 @@
 /*
- * 	startup.c
- *
+ * Description:
+ *  Toggles all LEDs connected to GPIO Port D using SysTick-based delay loops.
+ *  Demonstrates use of the SysTick timer for timing and software delays
+ *  on the MD407 (STM32F4-based) development board.
+ * Hardware: MD407
  */
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )

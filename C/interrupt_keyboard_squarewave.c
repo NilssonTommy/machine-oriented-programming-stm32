@@ -1,6 +1,10 @@
 /*
- * 	startup.c
- *
+* Description:
+ *  Uses SysTick to generate a square wave on GPIOE (PE0) and reads a 4x4 keypad
+ *  via external interrupts (EXTI lines 8–11). Specific key presses control when
+ *  the square wave starts, stops, or changes period. Direct register programming
+ *  on MD407 / STM32F4 (GPIOE, EXTI, NVIC, SysTick).
+ * Hardware: MD407 (STM32F4-based board)
  */
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )

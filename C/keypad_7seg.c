@@ -1,13 +1,11 @@
 /*
- * 	startup.c
- *
- *
-
-
  * Description:
- *  Controls a 4x4 keypad and displays the pressed key on a 7-segment display.
- *  Demonstrates GPIO input/output and matrix scanning on STM32.
- *  Hardware: MD407
+ *  Scans a 4x4 keypad (rows on PE12–PE15, columns on PE8–PE11)
+ *  and shows the pressed key (0..F) on a common-cathode 7-segment
+ *  display connected to PD0..PD7.
+ *  Demonstrates direct GPIO register programming and keypad matrix scanning
+ *  on the MD407 (STM32F4-based) board.
+ * Hardware: MD407
  */
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )
